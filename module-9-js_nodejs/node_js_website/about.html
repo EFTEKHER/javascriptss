@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom styles for the mobile menu when hidden */
+    #mobile-menu {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <a href="#" class="text-xl font-bold text-gray-700">LOGO</a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="/" class="text-gray-700 hover:text-blue-500 px-3 py-2 text-sm font-medium">Home</a>
+          <a href="/About" class="text-gray-700 hover:text-blue-500 px-3 py-2 text-sm font-medium">About</a>
+          <a href="/Terms" class="text-gray-700 hover:text-blue-500 px-3 py-2 text-sm font-medium">Terms</a>
+          <a href="/Contact" class="text-gray-700 hover:text-blue-500 px-3 py-2 text-sm font-medium">Contact</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none focus:text-blue-500">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden">
+      <a href="/" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Home</a>
+      <a href="/About" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">About</a>
+      <a href="/Terms" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Terms</a>
+      <a href="/Contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-20 bg-slate-800 h-[100vh]">
+    <div class="max-w-7xl mx-auto">
+        
+            <h1 class=" text-white text-center"> About </h1>
+        
+    </div>
+  </main>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      if (mobileMenu.style.display === "none" || mobileMenu.style.display === "") {
+        mobileMenu.style.display = "block";
+      } else {
+        mobileMenu.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>

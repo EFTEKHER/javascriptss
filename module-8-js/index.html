@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <button onclick="OnjAlert()">click me</button> 
+  <br>
+  <br>
+    <button onclick="objConfirm()">click me</button>
+    <br>
+    <button onclick="onjwrite()">write</button>
+    <p id="al"></p>
+    <script>
+        function OnjAlert()
+        {
+            alert("save success!");
+        }
+        function objConfirm()
+        {
+            var result = confirm("Are you sure?");
+            console.log(result);
+            if(result == true)
+            {
+                alert("You clicked OK");
+            }
+            else
+            {
+                alert("You clicked Cancel");
+            }
+        }
+        function onjwrite()
+        {
+             let x=prompt("what is your name?");
+                document.getElementById("al").innerHTML=x;
+                console.log(x)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="unorder">
+        
+    </ul>
+    <input type="text" id="u">
+    <button onclick="add()">Add</button>
+<script>
+    function add(){
+        var u=document.getElementById('u').value;
+        var ul=document.getElementsByClassName('unorder')[0];
+        var li=document.createElement('li');
+        li.innerHTML=u;
+        ul.appendChild(li);
+    }
+</script>
+
+</body>
+</html>

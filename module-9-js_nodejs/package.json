@@ -1,0 +1,12 @@
+{
+  "name": "module-9-js_nodejs",
+  "version": "1.0.0",
+  "main": "1_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
